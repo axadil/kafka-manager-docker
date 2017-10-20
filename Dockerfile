@@ -6,9 +6,10 @@ RUN yum update -y && \
     yum install -y java-1.8.0-openjdk-headless && \
     yum clean all
 
+ARG KM_VERSION
+
 ENV JAVA_HOME=/usr/java/default/ \
     ZK_HOSTS=localhost:2181 \
-    KM_VERSION=1.3.3.14 \
     KM_REVISION=04907ee737757369653969aadb6e1668c013fad2 \
     KM_CONFIGFILE="conf/application.conf"
 

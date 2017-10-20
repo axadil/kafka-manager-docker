@@ -15,7 +15,8 @@ services:
     links:
       - zookeeper:zk
     environment:
-      - KAFKA_ADVERTISED_HOST_NAME=
+      - KAFKA_ADVERTISED_HOST_NAME
+      - KAFKA_ZOOKEEPER_CONNECT=zk
       - KAFKA_ADVERTISED_PORT=9092
       - KAFKA_DELETE_TOPIC_ENABLE=true
       - KAFKA_LOG_RETENTION_HOURS=1
@@ -30,7 +31,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: kafka-manager:1.3.3.14
+    image: kafka-manager:${KM_VERSION}
     ports:
       - "9000:9000"
     links:
