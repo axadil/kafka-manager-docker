@@ -10,7 +10,7 @@ ARG KM_VERSION
 
 ENV JAVA_HOME=/usr/java/default/ \
     ZK_HOSTS=localhost:2181 \
-    KM_REVISION=04907ee737757369653969aadb6e1668c013fad2 \
+    KM_REVISION=63c5804a8dc896840a557f781813d322481cda91 \
     KM_CONFIGFILE="conf/application.conf"
 
 ADD start-kafka-manager.sh /kafka-manager-${KM_VERSION}/start-kafka-manager.sh
